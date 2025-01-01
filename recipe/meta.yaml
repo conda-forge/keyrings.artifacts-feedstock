@@ -14,15 +14,15 @@ build:
     - keyring = keyring.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - hatchling
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - keyring >=16.0
     - requests >=2.20.0
     - azure-identity >=1.17.1
@@ -38,6 +38,7 @@ test:
     - keyring --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jslorrma/keyrings.artifacts
