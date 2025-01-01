@@ -9,6 +9,12 @@ Package license: MIT
 
 Summary: Keyring backend, that automatically retrieves credentials for Azure Artifacts.
 
+The artifacts-keyring package provides authentication for publishing
+or consuming Python packages to or from Azure Artifacts feeds within Azure DevOps.
+This package is an extension to keyring, which will automatically find and use it once installed.
+Both pip and twine will use keyring to find credentials.
+
+
 Current build status
 ====================
 
