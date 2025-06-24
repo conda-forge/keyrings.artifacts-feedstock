@@ -18,7 +18,7 @@ build:
 
 requirements:
   host:
-    - python >={{ python_min }}
+    - python {{ python_min }}
     - hatchling
     - pip
   run:
@@ -37,7 +37,7 @@ test:
     - keyring --help
   requires:
     - pip
-    - python >={{ python_min }}
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jslorrma/keyrings.artifacts
