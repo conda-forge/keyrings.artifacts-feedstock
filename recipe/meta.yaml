@@ -18,17 +18,17 @@ build:
 
 requirements:
   host:
-    - {{ python_min }}
+    - python {{ python_min }}
     - hatchling
     - pip
   run:
-    - {{ python_min }}
+    - python >={{ python_min }}
     - keyring >=16.0
     - requests >=2.20.0
     - azure-identity >=1.17.1
     - keyrings.alt >=5.0.0
     - pycryptodomex >=3.20.0
-    - setuptools >=70.0.0,<76
+    - setuptools >=70,<76
 test:
   imports:
     - keyrings_artifacts
@@ -37,7 +37,7 @@ test:
     - keyring --help
   requires:
     - pip
-    - {{ python_min }}
+    - python {{ python_min }}
 
 about:
   home: https://github.com/jslorrma/keyrings.artifacts
